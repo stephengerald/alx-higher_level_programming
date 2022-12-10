@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+if __name__ == '__main__':
+    from calculator_1 import add, sub, mul, div
+    import sys
+
 def main(argv):
     argc = len(argv)
     ops = {
@@ -18,9 +22,3 @@ def main(argv):
         exit(1)
     res = ops[op](a, b)
     print('{:d} {:s} {:d} = {:d}'.format(a, op, b, res))
-
-
-    if __name__ == '__main__':
-        from sys import argv, exit
-        import calculator_1
-        main(argv)
